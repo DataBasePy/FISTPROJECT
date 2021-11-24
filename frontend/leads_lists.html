@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SUCRM</title>
+</head>
+    <style>
+        .mijoz {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 8px;
+            padding-right: 8px;
+            margin-top: 10px;
+            background-color: #f6f6f6;
+            font-size: 21px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+        }
+    </style>
+<body>
+        <h1>SUCRM Mijozlari</h1>
+        <a href="/leads/create/"><h2>Yaratish</h2></a>
+        {% for lead in leads%}
+        <div class = "mijoz">
+            <a href="/leads/{{ lead.pk }}/" > {{lead.ismi}} {{lead.familiyasi}}  {{lead.yoshi}}</a>
+            
+        </div>
+        {% endfor %}
+ 
+</body>
+</html>

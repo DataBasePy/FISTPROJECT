@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mijoz</title>
+</head>
+<body>
+    <a href="/leads/"><h1>Mijozlar bo`limi</h1></a>
+
+    <h1>Mijoz yaratish</h1>
+    <from method="post">
+        <p>
+        {% csrf_token %}
+        {{ forms.as_p }}
+        <button type="submit">Jo`natish</button>
+    </from>
+    
+</body>
+</html>
